@@ -1,0 +1,31 @@
+.option {
+  width: 50vw;
+  height: 100vh;
+  font-weight: bold;
+  font-size: 4rem;  
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  @include flexCenter;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &--first {
+    color: $color-secondary;
+
+    &:hover {
+      background-color: darken($color-tertiary, 5%);
+      color: lighten($color-secondary, 10%); 
+    }
+  }
+
+  &--second {
+    color: $color-tertiary;
+    background-color: $color-secondary;
+
+    &:hover {
+      background-color: darken($color-secondary, 5%);
+    }
+  }
+}
