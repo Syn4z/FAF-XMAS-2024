@@ -8,8 +8,8 @@ import cubeImg from "../assets/img/cube.jpg";
 const UserSelect = () => {
   const [options, setOptions] = useState([
     { id: 1, name: "Robot", img: robotImg, isChosen: false },
-    { id: 2, name: "Tambourine", img: tamborineImg, isChosen: false },
-    { id: 3, name: "Viola", img: violaImg, isChosen: false },
+    { id: 2, name: "Viola", img: violaImg, isChosen: false },
+    { id: 3, name: "Tambourine", img: tamborineImg, isChosen: false },
     { id: 4, name: "Rubik's Cube", img: cubeImg, isChosen: false },
   ]);
 
@@ -51,7 +51,7 @@ const UserSelect = () => {
         </div>
       ) : (
         <div className="multiple__options">
-          <h2 className="option__title">Choose your gift preference</h2>
+          <h2 className="option__title">Choose gift preference</h2>
           <div className="option__container">
             {visibleOptions.map((option, index) => (
               <div
