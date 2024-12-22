@@ -4,8 +4,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import MinMaxScaler
 from scipy.sparse import hstack
+from sklearn.decomposition import PCA
+import matplotlib.pyplot as plt
 
-
+# Load the dataset
 df = pd.read_csv("../data/santas_logistics.csv")
 
 # Fill NaN values for text columns with empty strings
@@ -53,6 +55,6 @@ df['Goodness_Rank'] = df['Cluster'].map(cluster_rank)
 
 # Display results
 # Save only the required columns to a new CSV
-df[['Child_ID', 'Name', 'Goodness_Rank']].to_csv("kids_sorted_ranks.csv", index=False)
+df[['Child_ID', 'Name', 'Gift_Preference', 'Goodness_Rank']].to_csv("kids_sorted_ranks.csv", index=False)
 
 print("Results saved to 'kids_sorted_ranks.csv'.")
